@@ -13,3 +13,10 @@
   opacity: 0;
   transition: opacity 1000ms ease-in;
 }
+
+.login-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}

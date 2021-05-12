@@ -21,21 +21,29 @@ const Navbar = ({ title, icon }) => {
         >
           <span className='navbar-toggler-icon'></span>
         </button>
-        <div className='mx-5'>
-          <div className='collapse navbar-collapse' id='navbarNavDropdown'>
-            <ul className='navbar-nav'>
-              <li className='nav-item'>
-                <Link className='nav-link active' to='/'>
-                  Home
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link active' to='/about'>
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
+        <div className='collapse navbar-collapse' id='navbarNavDropdown'>
+          <ul className='navbar-nav'>
+            <li className='nav-item'>
+              <Link className='nav-link active' to='/'>
+                Home
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link active' to='/about'>
+                About
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link active' to='/register'>
+                Register
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link active' to='/login'>
+                Login
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
