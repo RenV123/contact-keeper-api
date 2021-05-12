@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import AlertContext from '../../context/alert/alertContext';
 
 const Register = () => {
+  const alertContext = useContext(AlertContext);
+
+  const { setAlert } = alertContext;
+
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -13,10 +18,15 @@ const Register = () => {
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
+    e.preventDefault();
     var form = e.target;
 
+    if (password !== password2) {
+      e.stopPropagation();
+      setAlert("Passwords don't match!", 'danger');
+    }
+
     if (!form.checkValidity()) {
-      e.preventDefault();
       e.stopPropagation();
     } else {
       console.log('Register submit');
@@ -83,10 +93,11 @@ const Register = () => {
               value={password}
               aria-describedby='passwordInValidFeedback'
               onChange={onChange}
+              minLength='6'
               required
             />
             <div id='passwordInValidFeedback' className='invalid-feedback'>
-              Please fill in a password.
+              Please fill in a password of 6 or more characters.
             </div>
           </div>
           <div className='col-12'>
@@ -101,10 +112,11 @@ const Register = () => {
               value={password2}
               aria-describedby='password2InValidFeedback'
               onChange={onChange}
+              minLength='6'
               required
             />
             <div id='password2InValidFeedback' className='invalid-feedback'>
-              Repeat password doesn't match.
+              The password doesn't match.
             </div>
           </div>
           <div className='col-12 d-grid gap-2 mt-4'>

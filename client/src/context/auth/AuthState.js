@@ -11,7 +11,6 @@ import {
   LOGOUT,
   CLEAR_ERRORS,
 } from '../types';
-import authContext from './authContext';
 
 const AuthState = (props) => {
   const initialState = {
