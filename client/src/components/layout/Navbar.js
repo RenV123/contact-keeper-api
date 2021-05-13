@@ -22,7 +22,6 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <Fragment>
-      <li>Hello {user?.name}</li>
       <li className='nav-item'>
         <Link className='nav-link active' to='/register'>
           Register
@@ -54,8 +53,11 @@ const Navbar = ({ title, icon }) => {
         >
           <span className='navbar-toggler-icon'></span>
         </button>
-        <div className='collapse navbar-collapse' id='navbarNavDropdown'>
-          <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+        <div
+          className='collapse navbar-collapse justify-content-end'
+          id='navbarNavDropdown'
+        >
+          <ul className='navbar-nav mb-2 mb-lg-0'>
             {isAuthenticated ? authLinks : guestLinks}
             <li className='nav-item'>
               <Link className='nav-link active' to='/about'>
