@@ -12,3 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode
+
+# forgot this crucial detail
+.config/default.json
+.config/production.json
