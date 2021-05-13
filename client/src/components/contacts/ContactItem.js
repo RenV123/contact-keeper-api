@@ -10,8 +10,8 @@ const ContactItem = ({ contact }) => {
   const { _id, name, email, phone, type } = contact;
 
   const onDelete = () => {
-    clearCurrentContact();
     deleteContact(_id);
+    clearCurrentContact();
   };
 
   return (
