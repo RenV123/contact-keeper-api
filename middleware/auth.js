@@ -12,7 +12,7 @@ module.exports = function (request, response, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.jwtSecret);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     request.user = decoded.user;
     next();
   } catch (error) {
