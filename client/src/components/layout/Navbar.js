@@ -8,13 +8,16 @@ const Navbar = ({ title, icon }) => {
 
   const { isAuthenticated, logout, user } = authContext;
 
+  const onLogout = () => {
+    logout();
+  };
+
   const authLinks = (
     <Fragment>
-      <li>Hello {user?.name}</li>
-      <li className='nav-item'>
-        <a href='#!'>
-          <i className='bi bi-sign-out-alt'></i>
-          <span className='hide-sm'>Logout</span>
+      <li className='nav-item text-white mt-2 me-2'>Hello {user?.name}</li>
+      <li className='nav-item text-white mt-2'>
+        <a href='#!' onClick={onLogout}>
+          <i className='text-white bi bi-box-arrow-right mx-2'></i>
         </a>
       </li>
     </Fragment>
