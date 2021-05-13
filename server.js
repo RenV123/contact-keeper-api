@@ -9,11 +9,6 @@ connectDB();
 //Init Middleware
 app.use(express.json({ extended: false }));
 
-//Creating an endpoint
-app.get('/', (request, response) =>
-  response.json({ message: 'Welcome to the contact keeper api' })
-);
-
 // Define Routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
