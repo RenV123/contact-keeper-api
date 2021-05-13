@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://renv123:hTZE3Z^N&ns59zCdVX#z@contactkeeper.iggm5.mongodb.net/ContactKeeper?retryWrites=true&w=majority",
+    "jwtSecret": "SecretKeyOfRenv123"
+}
