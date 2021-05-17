@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
 
+//We only need to import collapse from bootstrap to get the navbar
+//dropdown menu to work.
+// eslint-disable-next-line
+import { Collapse } from 'bootstrap';
+
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
